@@ -1,11 +1,14 @@
 import { BrowserRouter, useRoutes } from 'react-router-dom'
+import { ArticleProvider } from '../../Context'
 import Home from '../Home'
 import MyOrders from '../MyOrders'
 import MyOrder from '../MyOrder'
 import MyAccount from '../MyAccount'
 import SignIn from '../SignIn'
 import NotFound from '../NotFound'
-
+import NavBar from '../../Component/NavBar'
+import Electrinic from '../Electronic'
+import Costmetic from '../Cosmetic'
 
 import '../App.css'
 
@@ -16,7 +19,13 @@ const AppRoutes = ()=>{
     {path:"/my-order", element: <MyOrder />},
     {path:"/my-account", element: <MyAccount />},
     {path:"/sign-in", element: <SignIn />},
-    {path:"/*", element: <NotFound />}
+    {path:"/my-electronic", element: <Electrinic />},
+    {path:"/my-cosmetic", element: <Costmetic />},
+    {path:"/*", element: <NotFound />},
+
+
+
+
   ])
 
   return routes
@@ -26,9 +35,14 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-      <AppRoutes />
+    <ArticleProvider>
+    <BrowserRouter>
+       <AppRoutes />
+       <NavBar />
       </BrowserRouter>
+    </ArticleProvider>
+   
+
     </>
   )
 }

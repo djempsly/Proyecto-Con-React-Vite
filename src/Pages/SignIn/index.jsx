@@ -1,13 +1,20 @@
 
-
+import Layout from "../../Component/Layout"
 
 function SignIn() {
 
   return (
     <>
-      <div className='bg-red-100'>
-      <p>SignIn</p>
-      </div>
+      <Layout>
+        SignIn
+      </Layout>
+
+      <form>
+                <div>
+                <label htmlFor="">Escribe tu email</label>
+                <input type="email" placeholder='Escribe tu email' />
+                </div>
+            </form>
   
     </>
   )
