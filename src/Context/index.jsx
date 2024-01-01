@@ -7,13 +7,13 @@ export const ArticleProvider = ({children}) => {
 const [count, setCount] = React.useState(0)
     // open Shopping car . 
 const [openShoppingCart, setOpenShoppingCart] = React.useState(false)
-const isOpenShoppingCart = ()=>{
-    setOpenShoppingCart(true)
-}
+const isOpenShoppingCart = ()=>{setOpenShoppingCart(true)}
+const closeOpenShoppingCart =()=>{setOpenShoppingCart(false)}
+//CheckOut Side Menu 
+const [checkOutSideMenu, setCheckOutSideMenu] = React.useState(false)
+const openCheckOutSideMenu = ()=>{setCheckOutSideMenu(true)}
+const closeCheckOutSideMenu =()=>{setCheckOutSideMenu(false)}
 
-const closeOpenShoppingCart =()=>{
-    setOpenShoppingCart(false)
-}
 //show prodduct
 const [showProductCart, setShowProductCart] = React.useState({})
 // showProducttoCart
@@ -29,7 +29,10 @@ const [showCart, setShowCart] = useState([])
             setShowProductCart,
             closeOpenShoppingCart,
             showCart, 
-            setShowCart
+            setShowCart,
+            checkOutSideMenu,
+            openCheckOutSideMenu,
+            closeCheckOutSideMenu
 
         }} >
             {children}

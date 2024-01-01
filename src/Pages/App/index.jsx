@@ -9,6 +9,7 @@ import NotFound from '../NotFound'
 import NavBar from '../../Component/NavBar'
 import Electrinic from '../Electronic'
 import Costmetic from '../Cosmetic'
+import { CheckOutSideMenu } from '../../Component/CheckOutSidemenu'
 
 import '../App.css'
 
@@ -39,6 +40,7 @@ function App() {
     <BrowserRouter>
        <AppRoutes />
        <NavBar />
+      <CheckOutSideMenu />
       </BrowserRouter>
     </ArticleProvider>
    
